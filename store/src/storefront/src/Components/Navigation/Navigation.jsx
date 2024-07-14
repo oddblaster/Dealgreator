@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Link, Routes, useNavigate} from "react-router-dom";
+
 import Store from "../Store/Store";
-import Cart from "../Cart/Cart";
 import './Navigation.css';
+import ItemPage from "../ItemPage/ItemPage";
 
 
 
@@ -19,7 +20,9 @@ function Cart(){
     )
 }
 
-function navigation(){
+
+
+function navigation(props){
     return (
         <Router>
         <div className="div">
@@ -36,6 +39,7 @@ function navigation(){
         </div>
         <Routes>
                 <Route path="/Store" element={<Store />} />
+                <Route path="/Product" element={<ItemPage />} />
         </Routes>
         </Router>
     )

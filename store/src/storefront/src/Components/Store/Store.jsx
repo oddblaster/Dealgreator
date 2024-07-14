@@ -1,19 +1,35 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect, BrowserRouter} from 'react'
+import { useNavigate} from 'react-router-dom';
 import './Store.css'
-import Navigation from '../Navigation/Navigation';
+import ProductPage from '../ItemPage/ItemPage.jsx'
 
 
 function Product(props){
+
     return (
         <div className="product">
             <img src={props.image} alt={props.name} className="productImage"></img>
             <p className="productName">{props.name}</p>
             <p className="productPrice">${props.price}</p>
             <p className="Description">{props.description}</p>
-            <button className="addToCartButton">Add to Cart</button>
+
+            <ProductButton id={props.key}/>
         </div>
     )
 }
+function ProductButton(props){
+    const navigate = useNavigate();
+    const goToProduct=()=>{
+        console.log(props.name)
+        navigate("/Product/",{state:{productName:props.name, productId:props.id}});
+    }
+    return(
+        <div>
+            <button className="addToCartButton" onClick={goToProduct}>Add to Cart</button>
+        </div>
+    )
+}
+
 function Products(){
     const [item, setItem] = useState([]);
 
@@ -28,7 +44,7 @@ function Products(){
     return (
         <ul className='productList'>
             {item.map(product => (
-                <Product key={product.name} name={product.name} price={product.price} image={"test.png"} description={product.description}></Product>
+                <Product key={product.item_id} name={product.name} price={product.price} image={"test.png"} description={product.description}></Product>
             ))}
         </ul>
     );

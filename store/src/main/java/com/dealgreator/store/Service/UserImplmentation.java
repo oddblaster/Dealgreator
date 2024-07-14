@@ -1,12 +1,12 @@
-package com.dealgreator.store.Entity;
+package com.dealgreator.store.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.dealgreator.store.Entity.User;
 import com.dealgreator.store.Repository.UserRepo;
-import com.dealgreator.store.Service.UserService;
 
 @Service
 public class UserImplmentation implements UserService {

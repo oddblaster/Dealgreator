@@ -16,7 +16,7 @@ import com.dealgreator.store.Entity.Cart;
 import com.dealgreator.store.Service.CartService;
 
 @RestController
-@RequestMapping(path = "/cart") // This means URL's start with /demo (after Application path)
+@RequestMapping("/cart")
 public class cartController {
 
     @Autowired

@@ -1,12 +1,12 @@
-package com.dealgreator.store.Entity;
+package com.dealgreator.store.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.dealgreator.store.Entity.Item;
 import com.dealgreator.store.Repository.ItemRepo;
-import com.dealgreator.store.Service.ItemService;
 
 @Service
 public class ItemImplmentation implements ItemService {

@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
-import './Cart.jsx'
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../Navigation/Navigation.jsx';
 
 
 function CartSection(){
@@ -11,7 +10,6 @@ function CartSection(){
         .then(json => setItem(json))
         .catch(error =>console.error(error));
     },[]);
-    console.log(item)
 
     return(
     <ul className='productList'>

@@ -16,7 +16,7 @@ import com.dealgreator.store.Entity.User;
 import com.dealgreator.store.Service.UserService;
 
 @RestController
-@RequestMapping(path = "/user") 
+@RequestMapping("/user")
 public class userController {
 
     @Autowired
@@ -70,5 +70,4 @@ public class userController {
             return new ResponseEntity<>(HttpStatusCode.valueOf(500));
         }
     }
-
 }
