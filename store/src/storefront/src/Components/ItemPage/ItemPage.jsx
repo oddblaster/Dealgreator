@@ -19,19 +19,14 @@ function ItemPage(){
     console.log(item)
     
     return(
-        <div>
-            <ul>
-            {item.map(product => (
-
-                <li key={product.name}>
-                    <img src={product.image} alt={product.name} className="productImage"></img>
-                    <p className="productName">{product.name}</p>
-                    <p className="productPrice">${product.price}</p>
-                    <p className="Description">{product.description}</p>
-                </li>
-           ))}
-        </ul>
-        </div>
+        <ul>
+        <li key={item.name}>
+            <img src={item.image} alt={item.name} className="productImage"></img>
+            <p className="productName">{item.name}</p>
+            <p className="productPrice">${item.price}</p>
+            <p className="Description">{item.description}</p>
+        </li>
+    </ul>
     )
 }
 export default ItemPage

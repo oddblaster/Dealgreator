@@ -14,8 +14,8 @@ function Cart(){
       }
     return(
         <button onClick={goToCart} className="cartButton">
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-shopping-trolley-2130858-1794989.png" 
-        alt="../assets/ShoppingCart.png" className="cart"></img>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-shopping-trolley-2130858-1794989.png" 
+            alt="../assets/ShoppingCart.png" className="cart"></img>
         </button>
     )
 }
@@ -25,18 +25,18 @@ function Cart(){
 function navigation(props){
     return (
         <Router>
-        <div className="div">
+        <div className = "mainDiv">
             <nav>
-                <ul className="navbar">
+                <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><a href="#">About</a></li>
                     <li><Link to="/Store">Store</Link></li>
                     <li><a href="#">Contact</a></li>
+                    <Cart />
                 </ul>
-
             </nav>
-            <Cart />
         </div>
+
         <Routes>
                 <Route path="/Store" element={<Store />} />
                 <Route path="/Product" element={<ItemPage />} />

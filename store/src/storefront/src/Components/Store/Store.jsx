@@ -13,7 +13,7 @@ function Product(props){
             <p className="productPrice">${props.price}</p>
             <p className="Description">{props.description}</p>
 
-            <ProductButton id={props.key}/>
+            <ProductButton id={props.id}/>
         </div>
     )
 }
@@ -21,7 +21,8 @@ function ProductButton(props){
     const navigate = useNavigate();
     const goToProduct=()=>{
         console.log(props.name)
-        navigate("/Product/",{state:{productName:props.name, productId:props.id}});
+        navigate("/Product/",{state:{productId:props.id}});
+        console.log(props.id)
     }
     return(
         <div>
@@ -44,7 +45,7 @@ function Products(){
     return (
         <ul className='productList'>
             {item.map(product => (
-                <Product key={product.item_id} name={product.name} price={product.price} image={"test.png"} description={product.description}></Product>
+                <Product key={product.id} id ={product.id} name={product.name} price={product.price} image={"test.png"} description={product.description}></Product>
             ))}
         </ul>
     );

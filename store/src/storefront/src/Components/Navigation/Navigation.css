@@ -1,0 +1,39 @@
+.mainDiv{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    align-items: center;
+    background-color: #000000;
+    border: 2px purple solid;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+li{
+    padding: 20px;
+    color: white;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.cartButton{
+    padding: 10px;
+    color: white;
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+}
+.cart{
+    width: 100%;
+    height: 100%;
+}
