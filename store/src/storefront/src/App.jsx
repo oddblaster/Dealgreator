@@ -6,8 +6,12 @@ import './App.css'
 
 function App() {
   return (
-    <div>
+    <div className = "App">
       <Navigation />
+
+      <div>
+
+      </div>
     </div>
   )
 }

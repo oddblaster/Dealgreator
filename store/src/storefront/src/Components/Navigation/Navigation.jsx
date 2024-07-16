@@ -32,9 +32,10 @@ function navigation(props){
                     <li><a href="#">About</a></li>
                     <li><Link to="/Store">Store</Link></li>
                     <li><a href="#">Contact</a></li>
-                    <Cart />
+                    
                 </ul>
             </nav>
+            <Cart />
         </div>
 
         <Routes>

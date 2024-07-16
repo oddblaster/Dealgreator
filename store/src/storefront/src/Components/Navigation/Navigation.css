@@ -1,8 +1,10 @@
 .mainDiv{
     width: 100%;
-    height: 100%;
     border: 2px solid black;
+    display: flex;
+    top: 0%;
 }
+    
 nav{
     width: 100%;
     height: 100%;
@@ -15,23 +17,22 @@ ul{
     display: flex;
     flex-direction: row;
     list-style: none;
+    justify-content: left;
 }
 
+
 li{
-    padding: 20px;
+    padding-left: 100px;
     color: white;
     font-size: 2.0rem;
     font-weight: bold;
 }
 
 .cartButton{
-    padding: 10px;
     color: white;
-    font-size: 2.0rem;
-    font-weight: bold;
-    margin-right: 10px;
     width: 100px;
     height: 100px;
+    border:5px white solid;
 }
 .cart{
     width: 100%;
